@@ -20,7 +20,12 @@ app.get('/', (req,res)=>{
     res.status(200).json({message:"Hello Everyonen"})
 })
 app.post('/api/referral', async (req, res) => {
-    const { referrerName, referrerEmail, refereeName, refereeEmail,course } = req.body;
+    const  referrerName=req.body.referrerName;
+    
+    const referrerEmail=req.body.referrerEmail;
+    const refereeName=req.body.refereeName;
+    const refereeEmail=req.body.refereeEmail;
+    const course  = req.body.course;
   
     if (!referrerName || !referrerEmail || !refereeName || !refereeEmail || !course) {
       return res.status(400).send({ error: 'All fields are required' });
