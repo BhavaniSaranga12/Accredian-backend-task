@@ -5,7 +5,7 @@ const cors=require('cors')
 const nodemailer=require('nodemailer')
 const {PrismaClient}= require('@prisma/client')
 app.use(cors({
-  origin: 'https://accredian-frontend-task-delta-eight.vercel.app/',
+  origin: 'https://accredian-frontend-task-delta-eight.vercel.app',
   methods: ['GET', 'POST'], 
   allowedHeaders: ['Content-Type'], 
 }))
